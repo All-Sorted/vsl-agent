@@ -1,0 +1,76 @@
+{
+  "name": "vsl-agent",
+  "version": "1.2",
+  "categories": [
+    "content",
+    "video"
+  ],
+  "moduleSubdir": "vsl-agent",
+  "dependencies": {
+    "packages": {},
+    "scripts": {}
+  },
+  "optionalComponents": [
+    "A member may connect their own approved writing or rendering workflow after review."
+  ],
+  "target": {
+    "requiredPaths": [
+      ".allsorted-target.json"
+    ],
+    "shape": {
+      "requiredPaths": [
+        ".allsorted-target.json"
+      ]
+    },
+    "notFoundMessage": "Create <target>/.allsorted-target.json containing {} and re-run with --target <path>."
+  },
+  "navPatch": null,
+  "validate": {
+    "requiredFiles": [
+      "vsl-agent/BRAIN.md",
+      "vsl-agent/package.json",
+      "vsl-agent/src/index.js",
+      "vsl-agent/config.example.json",
+      "vsl-agent/context/CONTEXT.md",
+      "vsl-agent/examples/sample-brief.json",
+      "vsl-agent/recipes/create-vsl.recipe.json",
+      "vsl-agent/recipes/claims-check.recipe.json",
+      "vsl-agent/recipes/review-terms.recipe.json",
+      "vsl-agent/recipes/status.js",
+      "vsl-agent/workflow/workflow.cjs",
+      "vsl-agent/workflow/BRAIN.md",
+      "vsl-agent/workflow/frameworks.json",
+      "vsl-agent/workflow/example-patterns.json",
+      "vsl-agent/workflow/EXAMPLES.md"
+    ],
+    "assertions": [
+      {
+        "file": "vsl-agent/BRAIN.md",
+        "contains": "Claim discipline",
+        "message": "Portable VSL brain missing"
+      },
+      {
+        "file": "vsl-agent/src/index.js",
+        "contains": "offline demo",
+        "message": "Offline demo runtime missing"
+      },
+      {
+        "file": "vsl-agent/examples/sample-brief.json",
+        "contains": "Example Offer",
+        "message": "Synthetic example missing"
+      },
+      {
+        "file": "vsl-agent/src/index.js",
+        "contains": "buildBeats",
+        "message": "Beat planner missing"
+      },
+      {
+        "file": "vsl-agent/README.md",
+        "contains": "user-selected agent writes",
+        "message": "Script workflow and offline boundary disclosure missing"
+      }
+    ],
+    "probeUrls": []
+  },
+  "allowedLiterals": []
+}
