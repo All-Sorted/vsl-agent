@@ -1,0 +1,85 @@
+[
+  {
+    "id": "founder",
+    "name": "Founder-led offer",
+    "useWhen": "A simple offer with a real founder story.",
+    "beats": [
+      "situation",
+      "founder motivation",
+      "product in use",
+      "evidence",
+      "offer and terms",
+      "one CTA"
+    ]
+  },
+  {
+    "id": "mechanism",
+    "name": "Mechanism education",
+    "useWhen": "An unfamiliar solution needs a clear explanation.",
+    "beats": [
+      "question",
+      "explain the problem without inventing a cause",
+      "show mechanism",
+      "demonstration",
+      "evidence",
+      "offer and terms",
+      "one CTA"
+    ]
+  },
+  {
+    "id": "demo",
+    "name": "Product demonstration",
+    "useWhen": "A physical product can show its value fairly.",
+    "beats": [
+      "visual question",
+      "controlled demonstration",
+      "explain result",
+      "relevant benefits",
+      "evidence limits",
+      "offer and terms",
+      "one CTA"
+    ]
+  },
+  {
+    "id": "workflow",
+    "name": "Software or workflow demo",
+    "useWhen": "The value becomes clear when a task is completed.",
+    "beats": [
+      "before workflow",
+      "screen demonstration",
+      "after workflow",
+      "evidenced difference",
+      "onboarding and limits",
+      "offer and terms",
+      "one CTA"
+    ]
+  },
+  {
+    "id": "application",
+    "name": "Consultation or application",
+    "useWhen": "A service or high-ticket offer begins with a fit check.",
+    "beats": [
+      "buyer situation",
+      "who it is for",
+      "method and delivery",
+      "real proof",
+      "fit and objections",
+      "terms",
+      "one application or booking CTA"
+    ]
+  },
+  {
+    "id": "education",
+    "name": "Question-led education",
+    "useWhen": "A buyer arrives with a specific question.",
+    "beats": [
+      "answer the question",
+      "explain options fairly",
+      "show relevant method",
+      "evidence",
+      "who it fits",
+      "offer and terms",
+      "one CTA"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "vsl-agent-module",
+  "version": "1.2.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "description": "Evidence-first VSL planner and AIOS-first script workflow",
+  "main": "src/index.js",
+  "scripts": {
+    "demo": "node src/index.js demo",
+    "workflow:validate": "node workflow/workflow.cjs validate"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "agent/vsl-agent/status",
+  "layer": "agent",
+  "owner": "vsl-agent",
+  "title": "Check video planner configuration status",
+  "tags": ["vsl-agent", "status", "doctor", "configured", "video"],
+  "phrases": [
+    "is vsl-agent configured",
+    "vsl-agent status",
+    "vsl-agent doctor",
+    "do I need an api key to plan a sales video",
+    "check my video planning setup",
+    "am I ready to plan a sales video",
+    "does this write the script for me"
+  ],
+  "actions": ["status"],
+  "safety": {
+    "destructive": false,
+    "notes": "Checks which shipped files are present. Makes no network call and writes nothing."
+  },
+  "inputMode": "structured",
+  "requiredContext": [],
+  "outputMode": "text",
+  "fallbackPolicy": "deterministic_first",
+  "handler": "./status.js"
+}

@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+"use strict";
+const { rejectUnknownArgs: __allsortedStrictArgs } = require("./lib/strict-args");
+if (require.main === module) __allsortedStrictArgs(process.argv.slice(2), ["--target"]);
+
+const fs = require("node:fs"); const path = require("node:path"); const { execFileSync } = require("node:child_process"); const spec = require("../module.spec.json"); function validate(target) { for (const file of spec.validate.requiredFiles) if (!fs.existsSync(path.join(target, file))) throw new Error(`Missing required file: ${file}`); for (const check of spec.validate.assertions) if (!fs.readFileSync(path.join(target, check.file), "utf8").includes(check.contains)) throw new Error(check.message); const output = execFileSync(process.execPath, [path.join(target, "vsl-agent", "src", "index.js"), "demo"], { encoding: "utf8", env: {} }); if (!output.includes("offline demo")) throw new Error("Credential-free smoke failed"); console.log("[vsl-agent] Validation passed"); } if (require.main === module) { try { const i = process.argv.indexOf("--target"); if (i < 0 || !process.argv[i + 1]) throw new Error("--target is required"); validate(path.resolve(process.argv[i + 1])); } catch (error) { console.error(`[vsl-agent] Validation failed: ${error.message}`); process.exit(1); } } module.exports = { validate };
